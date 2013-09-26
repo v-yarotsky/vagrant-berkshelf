@@ -19,4 +19,8 @@ end
 
 Spork.each_run do
   require 'berkshelf/vagrant'
+  Dir.glob(File.expand_path("../support/**/*.rb", __FILE__)).each do |h|
+    require h
+  end
 end
+
